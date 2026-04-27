@@ -125,74 +125,82 @@ uvicorn main:app --reload
 
 ## 🗂️ 8. 프로젝트 구조
 
+## 📁 프로젝트 구조
+
 ```
-care-eat/
+Care-Eat/
 ├── backend/
 │   ├── main.py
-│   ├── requirements.txt
+│   └── requirements.txt
 │
-└── src/
-    ├── App.jsx
-    ├── main.jsx
-    │
-    ├── assets/
-    │
-    ├── components/
-    │   ├── common/
-    │   │   ├── Button/
-    │   │   ├── EmptyState/
-    │   │   ├── LoadingSpinner/
-    │   │   └── Skeleton/
-    │   └── layout/
-    │       ├── Layout/
-    │       └── Navbar/
-    │
-    ├── containers/
-    │   ├── NavbarContainer.jsx
-    │   ├── ProtectedRoute.jsx
-    │   ├── LoginContainer.jsx
-    │   ├── RegisterContainer.jsx
-    │   ├── HomeContainer.jsx
-    │   ├── ResultContainer.jsx
-    │   ├── SupplementsContainer.jsx
-    │   ├── FoodsContainer.jsx
-    │   ├── RecipeContainer.jsx
-    │   ├── FavoritesContainer.jsx
-    │   └── HistoryContainer.jsx
-    │
-    ├── pages/
-    │   ├── Login/
-    │   ├── Register/
-    │   ├── Home/
-    │   ├── Result/
-    │   ├── Recipe/
-    │   ├── Favorites/
-    │   ├── History/
-    │   └── NotFound/
-    │
-    ├── services/
-    │   ├── axiosInstance.js
-    │   ├── geminiApi.js
-    │   ├── naverApi.js
-    │   ├── foodApi.js
-    │   └── coupangLink.js
-    │
-    ├── modules/
-    │   ├── index.jsx
-    │   ├── auth.jsx
-    │   ├── favorite.jsx
-    │   └── recommend.jsx
-    │   └── history.jsx
-    │   └── setting.jsx
-    │
-    ├── hooks/
-    │   └── useDebounce.js
-    │
-    └── styles/
-        ├── _variables.scss
-        ├── _mixins.scss
-        ├── _reset.scss
-        └── global.scss
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Button/
+│   │   │   ├── EmptyState/
+│   │   │   ├── LoadingSpinner/
+│   │   │   └── Skeleton/
+│   │   └── layout/
+│   │       ├── Layout/
+│   │       └── Navbar/
+│   │
+│   ├── containers/
+│   │   ├── HomeContainer.jsx
+│   │   ├── ResultContainer.jsx
+│   │   ├── FavoritesContainer.jsx
+│   │   ├── HistoryContainer.jsx
+│   │   ├── RecipeContainer.jsx
+│   │   ├── SupplementsContainer.jsx
+│   │   ├── FoodsContainer.jsx
+│   │   ├── LoginContainer.jsx
+│   │   ├── RegisterContainer.jsx
+│   │   ├── NavbarContainer.jsx
+│   │   └── ProtectedRoute.jsx
+│   │
+│   ├── hooks/
+│   │   └── useDebounce.js
+│   │
+│   ├── modules/
+│   │   ├── index.jsx
+│   │   ├── auth.jsx
+│   │   ├── recommend.jsx
+│   │   ├── favorite.jsx
+│   │   ├── history.jsx
+│   │   └── setting.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home/
+│   │   ├── Result/
+│   │   │   ├── Foods/
+│   │   │   └── Supplements/
+│   │   ├── Recipe/
+│   │   ├── Favorites/
+│   │   ├── History/
+│   │   ├── Login/
+│   │   ├── Register/
+│   │   └── NotFound/
+│   │
+│   ├── services/
+│   │   ├── axiosInstance.js
+│   │   ├── geminiApi.js
+│   │   ├── foodApi.js
+│   │   ├── naverApi.js
+│   │   └── coupangLink.js
+│   │
+│   ├── styles/
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   ├── _reset.scss
+│   │   └── global.scss
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── index.html
+├── vite.config.js
+└── package.json
 ```
 
 ---
