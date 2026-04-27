@@ -110,15 +110,16 @@ VITE_GEMINI_API_KEY=Gemini API 키
 **설치 및 실행**
 
 ```bash
-# 패키지 설치
-npm install --legacy-peer-deps
-
 # 프론트엔드 실행
+npm install --legacy-peer-deps
 npm run dev
 
 # 백엔드 실행
 cd backend
-uvicorn main:app --reload
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 ---
