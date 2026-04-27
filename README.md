@@ -127,16 +127,9 @@ uvicorn main:app --reload
 
 ```
 care-eat/
-├── .env
-├── .env.example
-├── index.html
-├── package.json
-├── vite.config.js
-│
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── .venv/
 │
 └── src/
     ├── App.jsx
@@ -188,10 +181,11 @@ care-eat/
     │   ├── index.jsx
     │   ├── auth.jsx
     │   ├── favorite.jsx
+    │   └── recommend.jsx
     │   └── history.jsx
+    │   └── setting.jsx
     │
     ├── hooks/
-    │   ├── useGemini.js
     │   └── useDebounce.js
     │
     └── styles/
