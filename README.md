@@ -41,7 +41,7 @@
 
 | 이름 | GitHub | 주요 작업 |
 |------|--------|-----------|
-| 전시현<br/>(팀장) | [@s1hyun7215](https://github.com) | 🔹 Redux 모듈 설계 및 구현 <br/>🔹 App.jsx 라우터 구성 및 ProtectedRoute 구현 <br/> 🔹 홈 페이지 구현 (증상 입력, Gemini AI 분석 연동) <br/> 🔹 결과 페이지 공통 UI 구현 <br/> 🔹 App.jsx 라우터 구성 및 ProtectedRoute 구현 |
+| 전시현<br/>(팀장) | [@s1hyun7215](https://github.com) | 🔹 Redux 모듈 설계 및 구현 <br/>🔹 SPA 라우터 구성 <br/> 🔹 홈 페이지 구현 (증상 입력, Gemini AI 분석 연동) <br/> 🔹 결과 페이지 공통 UI 구현 <br/> 🔹 App.jsx 라우터 구성 및 ProtectedRoute 구현 |
 | 이민주<br/>(팀원) | [@danggiju](https://github.com) | 🔹 영양제 탭 UI 구현 (네이버 쇼핑 API 연동)<br/>🔹 식재료 탭 UI 구현 (네이버 쇼핑 API 연동)<br/>🔹 영양제/식재료 카드 컴포넌트 구현<br/>🔹 즐겨찾기 추가 버튼 연동<br/>🔹 레시피 페이지 이동 버튼 연동 |
 | 권용익<br/>(팀원) | [@dyddlr068](https://github.com) | 🔹 레시피 페이지 구현<br/>&nbsp;&nbsp;&nbsp;&nbsp;1. 식약처 API 호출 및 데이터 파싱<br/>&nbsp;&nbsp;&nbsp;&nbsp;2. 레시피 카드 3열 반응형 그리드<br/>&nbsp;&nbsp;&nbsp;&nbsp;3. 카드 클릭 시 재료/조리방법 모달 팝업<br/>&nbsp;&nbsp;&nbsp;&nbsp;4. 재료별 네이버/쿠팡 구매 링크<br/>&nbsp;&nbsp;&nbsp;&nbsp;5. 무한 스크롤 (20개씩 로딩)<br/>🔹 즐겨찾기 페이지 구현<br/>&nbsp;&nbsp;&nbsp;&nbsp;1. 필터 탭 (전체/영양제/식재료/레시피)<br/>&nbsp;&nbsp;&nbsp;&nbsp;2. 메모 인라인 편집/삭제<br/>🔹 검색기록 페이지 구현<br/>&nbsp;&nbsp;&nbsp;&nbsp;1. 리스트/타임라인 뷰 토글<br/>&nbsp;&nbsp;&nbsp;&nbsp;2. 항목 클릭 시 결과 페이지 재진입<br/>&nbsp;&nbsp;&nbsp;&nbsp;3. 개별/전체 삭제<br/>🔹 성능 최적화<br/>&nbsp;&nbsp;&nbsp;&nbsp;1. react-virtualized 가상 스크롤 적용<br/>&nbsp;&nbsp;&nbsp;&nbsp;2. useMemo, useCallback 최적화 |
 
