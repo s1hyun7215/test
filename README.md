@@ -228,6 +228,11 @@ Care-Eat/
 - **recommend 모듈**: AI 추천 요청/응답 상태 관리 (로딩/성공/에러 처리)
 - **setting 모듈**: 선호 쇼핑몰 설정 (네이버/쿠팡/전체), localStorage 동기화
 
+** Redux 데이터 흐름도 **
+<img width="500" alt="redux drawio" src="https://github.com/user-attachments/assets/6b2b64c7-6400-4943-961b-d5c97937dcfb" />
+
+
+
 ---
 
 ## 📋 11. API 명세서
