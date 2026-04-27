@@ -374,11 +374,18 @@ Care-Eat/
 
 ## 👀 21. 주요 기능 실행 화면
 
+- 회원가입/로그인 페이지
+<img width="1311" height="869" alt="register_login" src="https://github.com/user-attachments/assets/32241060-475e-4658-bf97-31dd0bcdf667" />
 - 홈 페이지
+<img width="1311" height="869" alt="home" src="https://github.com/user-attachments/assets/93e10a11-44d0-4dc1-a5d8-92516e9964c6" />
 - 결과 페이지
+<img width="878" height="582" alt="result" src="https://github.com/user-attachments/assets/82485ad0-78c9-4638-8465-620598f1e8b9" />
 - 레시피 페이지
+<img width="1311" height="869" alt="recipe" src="https://github.com/user-attachments/assets/3cf049eb-053e-46fc-876f-045022c124c1" />
 - 즐겨찾기 페이지
+<img width="878" height="582" alt="favorite" src="https://github.com/user-attachments/assets/9f7a5ffc-25cc-4fba-8c25-3ee3b7db7536" />
 - 검색기록 페이지
+<img width="1311" height="869" alt="history" src="https://github.com/user-attachments/assets/16549af2-e1ce-4e4c-8dd7-0363c1ed9e6e" />
 
 ---
 
