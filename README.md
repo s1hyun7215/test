@@ -332,9 +332,8 @@ Care-Eat/
 
 ## 📜 17. 가상 스크롤
 
-- `react-virtualized` List 적용
-- 화면에 보이는 카드만 DOM에 렌더링
-- 100개 데이터도 실제 DOM엔 일부만 존재
+- `react-virtualized` List + AutoSizer 적용
+- 스크롤 위치 기준으로 필요한 행만 렌더링
 - 웹 3열 / 태블릿 2열 / 모바일 1열 반응형 적용
 
 ---
