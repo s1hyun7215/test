@@ -1,3 +1,4 @@
+
 # React + Vite(첫번째 프로젝트)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -18,3 +19,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 <img width="536" alt="Honeycam 2026-04-27 09-34-22" src="https://github.com/user-attachments/assets/d827584c-04f9-432e-b1de-3e3a9a1c8daa" />
 
+<img width="960" alt="Honeycam 2026-04-27 09-44-02" src="https://github.com/user-attachments/assets/6abc5e32-2a39-4222-92f2-9d3804777d10" />
