@@ -285,7 +285,7 @@ Care-Eat/
 |------|-----------|----------------|
 | **🤖 AI 증상 분석** | 자연어 증상 입력 → Gemini AI 분석 → 영양소 추출 | `geminiApi.js` |
 | | FastAPI 백엔드 → Gemini API → 영양소·영양제·식재료 추천 반환 | `analyzeSymptom()` |
-| | `useDebounce` 훅으로 입력 중 불필요한 API 호출 방지 (300ms) | `hooks/useDebounce.js` |
+| | `useDebounce` 훅으로 입력 중 불필요한 API 호출 방지 (800ms) | `hooks/useDebounce.js` |
 | **🛒 쇼핑 연동** | Gemini 분석 결과 기반 네이버 쇼핑 API 검색 결과 표시 | `naverApi.js` |
 | | HTML 태그 제거 후 상품명·이미지·가격 표시 | `replace(/<[^>]*>/g, '')` |
 | | CORS 우회 → Vite 프록시(`/naver-api`) 경유 | `vite.config.js` |
@@ -305,8 +305,8 @@ Care-Eat/
 | 기능 | 구현 내용 | 적용 기술/코드 |
 |------|-----------|----------------|
 | **CRUD** | 즐겨찾기와 검색기록의 데이터 생성·조회·수정·삭제 | `modules/favorite.jsx`, `modules/history.jsx` |
-| **C (Create)** | 즐겨찾기 추가, 증상 검색 시 검색기록 자동 저장 | `FavoritesContainer.jsx`, `HistoryContainer.jsx` |
-| **R (Read)** | 즐겨찾기 탭 필터 조회, 검색기록 리스트/타임라인 뷰 조회 | `Favorites.jsx`, `History.jsx` |
+| **C (Create)** | 즐겨찾기 추가, 증상 검색 시 검색기록 자동 저장 | `FoodsContainer.jsx`, `SupplementsContainer.jsx`, `HomeContainer.jsx` |
+| **R (Read)** | 즐겨찾기 탭 필터 조회, 검색기록 리스트 뷰 조회 | `Favorites.jsx`, `History.jsx` |
 | **U (Update)** | 즐겨찾기 카드 메모 인라인 편집 | `Favorites.jsx` 내 `FavoriteCard` |
 | **D (Delete)** | 즐겨찾기 개별 삭제, 검색기록 개별/전체 삭제 | `FavoritesContainer.jsx`, `HistoryContainer.jsx` |
 
