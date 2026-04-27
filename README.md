@@ -368,7 +368,7 @@ Care-Eat/
 
 ## 📊 20. Flow Chart
 
-> [플로우차트 링크](https://링크입력)
+> [플로우차트 링크](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link)
 
 ---
 
