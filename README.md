@@ -124,85 +124,24 @@ uvicorn main:app --reload --host 127.0.0.1 --port 8000
 
 ---
 
-## 📁 프로젝트 구조
+## 👀 주요 기능 실행 화면
+> 📋 아이콘을 클릭하면 해당 페이지의 플로우차트를 볼 수 있어요.<br/>
+> 🖼️ 이미지를 클릭하면 크게 볼 수 있어요.
 
-```
-Care-Eat/
-├── backend/
-│   ├── main.py
-│   └── requirements.txt
-│
-├── src/
-│   ├── assets/
-│   │
-│   ├── components/
-│   │   ├── common/
-│   │   │   ├── Button/
-│   │   │   ├── EmptyState/
-│   │   │   ├── LoadingSpinner/
-│   │   │   └── Skeleton/
-│   │   └── layout/
-│   │       ├── Layout/
-│   │       └── Navbar/
-│   │
-│   ├── containers/
-│   │   ├── HomeContainer.jsx
-│   │   ├── ResultContainer.jsx
-│   │   ├── FavoritesContainer.jsx
-│   │   ├── HistoryContainer.jsx
-│   │   ├── RecipeContainer.jsx
-│   │   ├── SupplementsContainer.jsx
-│   │   ├── FoodsContainer.jsx
-│   │   ├── LoginContainer.jsx
-│   │   ├── RegisterContainer.jsx
-│   │   ├── NavbarContainer.jsx
-│   │   └── ProtectedRoute.jsx
-│   │
-│   ├── hooks/
-│   │   └── useDebounce.js
-│   │
-│   ├── modules/
-│   │   ├── index.jsx
-│   │   ├── auth.jsx
-│   │   ├── recommend.jsx
-│   │   ├── favorite.jsx
-│   │   ├── history.jsx
-│   │   └── setting.jsx
-│   │
-│   ├── pages/
-│   │   ├── Home/
-│   │   ├── Result/
-│   │   │   ├── Foods/
-│   │   │   └── Supplements/
-│   │   ├── Recipe/
-│   │   ├── Favorites/
-│   │   ├── History/
-│   │   ├── Login/
-│   │   ├── Register/
-│   │   └── NotFound/
-│   │
-│   ├── services/
-│   │   ├── axiosInstance.js
-│   │   ├── geminiApi.js
-│   │   ├── foodApi.js
-│   │   ├── naverApi.js
-│   │   └── coupangLink.js
-│   │
-│   ├── styles/
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   │   ├── _reset.scss
-│   │   └── global.scss
-│   │
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── index.html
-├── vite.config.js
-└── package.json
-```
+| 회원가입/로그인 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80319ceadaba3b665bae) | 홈페이지 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80dba0f1e6a4f5714353) |
+|:---:|:---:|
+| <img width="400" alt="register_login" src="https://github.com/user-attachments/assets/32241060-475e-4658-bf97-31dd0bcdf667" /> | <img width="400" alt="home" src="https://github.com/user-attachments/assets/93e10a11-44d0-4dc1-a5d8-92516e9964c6" /> |
+
+| 결과 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb8056b654fd8a7ff6cba4) | 레시피 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb802dab31fc8c6f92047a) |
+|:---:|:---:|
+| <img width="400" alt="result" src="https://github.com/user-attachments/assets/82485ad0-78c9-4638-8465-620598f1e8b9" /> | <img width="400" alt="recipe" src="https://github.com/user-attachments/assets/3cf049eb-053e-46fc-876f-045022c124c1" /> |
+
+| 즐겨찾기 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb8077bc00f2c0ad0d7f14) | 검색기록 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80f2b0f0fc1214f49ed1) |
+|:---:|:---:|
+| <img width="400" alt="favorite" src="https://github.com/user-attachments/assets/9f7a5ffc-25cc-4fba-8c25-3ee3b7db7536" /> | <img width="400" alt="history" src="https://github.com/user-attachments/assets/16549af2-e1ce-4e4c-8dd7-0363c1ed9e6e" /> |
 
 ---
+
 
 ## 🗺️ 라우팅 구조
 
@@ -368,23 +307,6 @@ Care-Eat/
 
 ---
 
-## 👀 주요 기능 실행 화면
-> 📋 아이콘을 클릭하면 해당 페이지의 플로우차트를 볼 수 있어요.<br/>
-> 🖼️ 이미지를 클릭하면 크게 볼 수 있어요.
-
-| 회원가입/로그인 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80319ceadaba3b665bae) | 홈페이지 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80dba0f1e6a4f5714353) |
-|:---:|:---:|
-| <img width="400" alt="register_login" src="https://github.com/user-attachments/assets/32241060-475e-4658-bf97-31dd0bcdf667" /> | <img width="400" alt="home" src="https://github.com/user-attachments/assets/93e10a11-44d0-4dc1-a5d8-92516e9964c6" /> |
-
-| 결과 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb8056b654fd8a7ff6cba4) | 레시피 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb802dab31fc8c6f92047a) |
-|:---:|:---:|
-| <img width="400" alt="result" src="https://github.com/user-attachments/assets/82485ad0-78c9-4638-8465-620598f1e8b9" /> | <img width="400" alt="recipe" src="https://github.com/user-attachments/assets/3cf049eb-053e-46fc-876f-045022c124c1" /> |
-
-| 즐겨찾기 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb8077bc00f2c0ad0d7f14) | 검색기록 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80f2b0f0fc1214f49ed1) |
-|:---:|:---:|
-| <img width="400" alt="favorite" src="https://github.com/user-attachments/assets/9f7a5ffc-25cc-4fba-8c25-3ee3b7db7536" /> | <img width="400" alt="history" src="https://github.com/user-attachments/assets/16549af2-e1ce-4e4c-8dd7-0363c1ed9e6e" /> |
-
----
 
 ## 👥 팀 프로젝트 회의록
 
