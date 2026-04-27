@@ -225,7 +225,8 @@ Care-Eat/
 - **auth 모듈**: 로그인/로그아웃 상태, localStorage 동기화
 - **favorite 모듈**: 즐겨찾기 추가/삭제/메모수정, localStorage 동기화
 - **history 모듈**: 검색기록 추가/삭제/전체삭제, localStorage 동기화
-- `connect` HOC 방식 사용 (`useSelector` / `useDispatch` 사용 금지)
+- **recommend 모듈**: AI 추천 요청/응답 상태 관리 (로딩/성공/에러 처리)
+- **setting 모듈**: 선호 쇼핑몰 설정 (네이버/쿠팡/전체), localStorage 동기화
 
 ---
 
