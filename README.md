@@ -1,5 +1,3 @@
-https://raw.githubusercontent.com/s1hyun7215/test/main/image/history.drawio.png
-
 
 <div align="center">
 
