@@ -360,11 +360,11 @@ Care-Eat/
 
 ## 📱 19. 반응형 웹
 
-- **웹**: 3열 그리드
-- **모바일**: 1열 그리드
-- SCSS 믹스인 기반 반응형 스타일 적용
-- <img width="1884" height="872" alt="image" src="https://github.com/user-attachments/assets/032f9c8b-32de-4132-a545-b02d728bf26f" />
-<img width="597" height="780" alt="image" src="https://github.com/user-attachments/assets/5ff245d2-1857-4d13-ae3d-8041dac3bfad" />
+>다양한 디바이스에서 동일한 UX를 제공하도록 반응형 디자인을 적용했습니다.
+
+- 💻 PC
+- 📊 태블릿
+- 📱 모바일
 
 
 
