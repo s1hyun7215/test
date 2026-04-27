@@ -1,6 +1,5 @@
 <div align="center">
 
-# <img width="1472" height="654" alt="image" src="https://github.com/user-attachments/assets/44e93682-da84-4aac-b801-85c26ad2407e" />
 🥗 CareEat
 ### AI 영양소 분석 기반 식재료·영양제 추천 플랫폼
 
