@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/27112070/README.md)
 <div align="center">
 
 # <img width="1472" height="654" alt="image" src="https://github.com/user-attachments/assets/44e93682-da84-4aac-b801-85c26ad2407e" />
@@ -405,6 +404,6 @@ care-eat/
 
 <div align="center">
 
-**CareEat** · 2025 · React + Gemini AI
+**CareEat** · 2026 · Frontend team project
 
 </div>
