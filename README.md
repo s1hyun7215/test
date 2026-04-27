@@ -363,9 +363,7 @@ Care-Eat/
 
 >다양한 디바이스에서 동일한 UX를 제공하도록 반응형 디자인을 적용했습니다.
 
-- 💻 PC
-- 📊 태블릿
-- 📱 모바일
+PC / 태블릿 / 모바일
 
 <img width="1624" height="782" alt="반응형" src="https://github.com/user-attachments/assets/aaf7f977-a6d2-41a5-8702-624400e9ec79" />
 
