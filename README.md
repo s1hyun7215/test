@@ -374,11 +374,9 @@ care-eat/
 
 ---
 
-## 👥 22. 팀원별 작업 기록
+## 👥 22. 팀 프로젝트 회의록
 
-- [전시현 작업일지](https://링크입력) </br>
-- [이민주 작업일지](https://링크입력) </br>
-- [권용익 작업일지](https://www.notion.so/CareEat-34b7510671e7800aa3dbebd9a09bb623?source=copy_link)
+- [CARE-EAT 팀프로젝트 회의록](https://www.notion.so/CareEat-34c0f9c246cb807eb452d3a576363dbd?source=copy_link) </br>
 
 ---
 
