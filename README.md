@@ -294,9 +294,6 @@ Care-Eat/
 | | `IntersectionObserver` → 20개씩 자동 추가 로드 (무한 스크롤) | `RecipeContainer.jsx` |
 | **🔗 구매 링크** | 재료 클릭 → 네이버 쇼핑 / 쿠팡 구매 페이지 이동 | `coupangLink.js` |
 | | `extractIngredientName()` 으로 수량·단위 제거 후 검색 키워드 사용 | `foodApi.js` |
-<img width="1196" height="637" alt="image" src="https://github.com/user-attachments/assets/bd06a2a7-ec41-466f-b019-5a51c0b89cf0" />
-<img width="1177" height="844" alt="image" src="https://github.com/user-attachments/assets/12b5b168-bf5c-41db-a5d7-8dd789f3ce88" />
-<img width="1174" height="878" alt="image" src="https://github.com/user-attachments/assets/58de9d85-b1c7-4e07-813e-cd9492ab746c" />
 
 
 
