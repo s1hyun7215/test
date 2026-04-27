@@ -375,6 +375,8 @@ Care-Eat/
 ---
 
 ## 👀 21. 주요 기능 실행 화면
+> 📋 아이콘을 클릭하면 해당 페이지의 플로우차트를 볼 수 있어요.
+> 🖼️ 이미지를 클릭하면 크게 볼 수 있어요.
 
 | 회원가입/로그인 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80319ceadaba3b665bae) | 홈페이지 [📋](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80dba0f1e6a4f5714353) |
 |:---:|:---:|
