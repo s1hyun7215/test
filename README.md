@@ -376,7 +376,7 @@ Care-Eat/
 
 ## 👀 21. 주요 기능 실행 화면
 
-- 회원가입/로그인 페이지
+- [회원가입/로그인 페이지](https://www.notion.so/Care-Eat-Flow-Chart-34f0f9c246cb8077ba5ee24e287c665e?source=copy_link#34f0f9c246cb80319ceadaba3b665bae)
 <img width="1311" height="869" alt="register_login" src="https://github.com/user-attachments/assets/32241060-475e-4658-bf97-31dd0bcdf667" />
 - 홈 페이지
 <img width="1311" height="869" alt="home" src="https://github.com/user-attachments/assets/93e10a11-44d0-4dc1-a5d8-92516e9964c6" />
