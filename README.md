@@ -283,7 +283,7 @@ Care-Eat/
 
 | 기능 | 구현 내용 | 적용 기술/코드 |
 |------|-----------|----------------|
-| **🤖 AI 증상 분석** | 자연어 증상 입력 → Gemini AI 분석 → 영양소 추출 | `useGemini.js`, `geminiApi.js` |
+| **🤖 AI 증상 분석** | 자연어 증상 입력 → Gemini AI 분석 → 영양소 추출 | `geminiApi.js` |
 | | FastAPI 백엔드 → Gemini API → 영양소·영양제·식재료 추천 반환 | `analyzeSymptom()` |
 | | `useDebounce` 훅으로 입력 중 불필요한 API 호출 방지 (300ms) | `hooks/useDebounce.js` |
 | **🛒 쇼핑 연동** | Gemini 분석 결과 기반 네이버 쇼핑 API 검색 결과 표시 | `naverApi.js` |
