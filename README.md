@@ -142,7 +142,6 @@ public class InvalidMoveException extends Exception {
 ### 예외 처리 흐름
 
 예외는 발생한 곳에서 바로 처리하지 않고, **상위 계층(`GameFrame`)까지 전파**되어 사용자에게 알림 다이얼로그로 표시됩니다.
-
 ```java
 // GameFrame.java
 private void playOneTurn() {
