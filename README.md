@@ -73,7 +73,7 @@ public class AIPlayer extends Player {
 **이렇게 설계한 이유**
 - 새로운 난이도(예: 매우 어려움)를 추가할 때 `Strategy` 인터페이스만 구현하면 됨
 - 기존 코드 수정 없이 기능 확장 가능 (**OCP, 개방-폐쇄 원칙**)
-- 런타임에 난이도를 동적으로 교체할 수 있음
+- AIPlayer는 구체 클래스가 아닌 Strategy 인터페이스에 의존 (**DIP, 의존성 역전 원칙**)
 
 <br>
 
@@ -96,7 +96,7 @@ public abstract class Player {
 **이렇게 설계한 이유**
 - `Game` 클래스는 현재 플레이어가 사람인지 AI인지 신경 쓸 필요 없음
 - 게임 진행 로직이 `currentPlayer.decideMove(board)` 한 줄로 단순해짐
-- 향후 네트워크 플레이어, 리플레이 플레이어 등도 같은 방식으로 확장 가능
+- Player는 "수를 결정한다"는 단일 책임만 가짐 (**SRP, 단일 책임 원칙**)
 
 <br>
 
@@ -119,30 +119,3 @@ public int playTurn() throws InvalidMoveException {
 ```
 
 `Game`은 **누가 어떻게 수를 결정하는지** 전혀 모릅니다. 그저 `Player`에게 묻고, `Board`에 반영할 뿐입니다. 이러한 책임 분리 덕분에 각 클래스가 자기 역할에만 집중할 수 있습니다.
-
-<br>
-
-### 📦 패키지 구조
-
-```
-connect4/
-├── Main.java              # 진입점, 난이도/선공 선택 다이얼로그
-├── Game.java              # 게임 진행 관리
-├── model/
-│   ├── Board.java         # 6×7 보드, 승패 판정
-│   └── Piece.java         # RED, YELLOW, EMPTY
-├── player/
-│   ├── Player.java        # 추상 클래스
-│   ├── HumanPlayer.java
-│   └── AIPlayer.java
-├── ai/
-│   ├── Strategy.java      # 전략 인터페이스
-│   ├── EasyStrategy.java
-│   ├── MediumStrategy.java
-│   └── HardStrategy.java
-├── ui/
-│   ├── GameFrame.java     # 메인 창
-│   └── BoardPanel.java    # 보드 렌더링 + 마우스 입력
-└── exception/
-    └── InvalidMoveException.java
-```
