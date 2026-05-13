@@ -119,3 +119,60 @@ public int playTurn() throws InvalidMoveException {
 ```
 
 `Game`은 **누가 어떻게 수를 결정하는지** 전혀 모릅니다. 그저 `Player`에게 묻고, `Board`에 반영할 뿐입니다. 이러한 책임 분리 덕분에 각 클래스가 자기 역할에만 집중할 수 있습니다.
+
+## 🚨 예외 처리 설계
+
+게임 중 발생할 수 있는 **잘못된 수(Invalid Move)** 를 명확히 다루기 위해 사용자 정의 예외 `InvalidMoveException`을 정의했습니다.
+
+<br>
+
+### 사용자 정의 예외 클래스
+
+```java
+public class InvalidMoveException extends Exception {
+    public InvalidMoveException(String message) {
+        super(message);
+    }
+}
+```
+
+<br>
+
+### 예외 발생 시점
+
+| 발생 위치 | 발생 조건 |
+|-----------|-----------|
+| `Board.dropPiece()` | 잘못된 열 번호 (음수 또는 범위 초과) |
+| `Board.dropPiece()` | 이미 가득 찬 열에 말을 놓으려 할 때 |
+| `Board.dropPiece()` | `EMPTY` 말을 놓으려 할 때 |
+| `HumanPlayer.decideMove()` | 클릭 입력 없이 호출된 경우 |
+| `Strategy.decideMove()` | 둘 수 있는 열이 하나도 없을 때 |
+
+<br>
+
+### 예외 처리 흐름
+
+예외는 발생한 곳에서 바로 처리하지 않고, **상위 계층(`GameFrame`)까지 전파**되어 사용자에게 알림 다이얼로그로 표시됩니다.
+
+```java
+// GameFrame.java
+private void playOneTurn() {
+    try {
+        game.playTurn();
+        // ... 정상 처리
+    } catch (InvalidMoveException e) {
+        // 사용자에게 알림, 다시 입력받기
+        JOptionPane.showMessageDialog(this, 
+            e.getMessage(), "잘못된 수", JOptionPane.WARNING_MESSAGE);
+    }
+}
+```
+
+<br>
+
+### 이렇게 설계한 이유
+
+- **명확한 의미 전달** — `boolean` 반환값 대신 예외를 사용해 "정상 흐름이 아닌 비정상 상황"임을 명시
+- **에러 메시지 일원화** — 어떤 종류의 잘못된 수든 `getMessage()`로 사용자에게 그대로 전달 가능
+- **책임 분리** — `Board`와 `Player`는 예외를 **발생시키기만** 하고, UI 계층(`GameFrame`)이 **처리**를 담당
+- **게임 진행 보호** — 예외가 발생해도 게임이 종료되지 않고, 사용자가 다시 입력할 수 있도록 복구
