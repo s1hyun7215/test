@@ -126,27 +126,6 @@ public int playTurn() throws InvalidMoveException {
 
 게임 중 발생할 수 있는 **잘못된 수(Invalid Move)** 를 명확히 다루기 위해 사용자 정의 예외 `InvalidMoveException`을 정의했습니다.
 
-<br>
-
-### 예외 처리 흐름
-
-예외는 발생한 곳에서 바로 처리하지 않고, **상위 계층(`GameFrame`)까지 전파**되어 사용자에게 알림 다이얼로그로 표시됩니다.
-
-```java
-// GameFrame.java
-private void playOneTurn() {
-    try {
-        game.playTurn();
-        // ... 정상 처리
-    } catch (InvalidMoveException e) {
-        // 사용자에게 알림, 다시 입력받기
-        JOptionPane.showMessageDialog(this, 
-            e.getMessage(), "잘못된 수", JOptionPane.WARNING_MESSAGE);
-    }
-}
-```
-<br>
-
 ### 예외 상황 및 처리 방식
 
 #### 실제 발생 가능 예외
@@ -170,6 +149,26 @@ private void playOneTurn() {
 - `EMPTY` 말을 놓으려 함 → 코드 어디서도 `EMPTY`를 인자로 안 넘김
 - 클릭 없이 `HumanPlayer.decideMove()` 호출 → `GameFrame.handleHumanClick()`이 클릭 후에만 `playOneTurn()` 부르니까 안 일어남
 - 둘 수 있는 열이 없음 → 보드가 가득 차면 Game이 먼저 DRAW 상태로 만들어서 AI 호출 자체가 안 됨
+
+<br>
+
+### 예외 처리 흐름
+
+예외는 발생한 곳에서 바로 처리하지 않고, **상위 계층(`GameFrame`)까지 전파**되어 사용자에게 알림 다이얼로그로 표시됩니다.
+
+```java
+// GameFrame.java
+private void playOneTurn() {
+    try {
+        game.playTurn();
+        // ... 정상 처리
+    } catch (InvalidMoveException e) {
+        // 사용자에게 알림, 다시 입력받기
+        JOptionPane.showMessageDialog(this, 
+            e.getMessage(), "잘못된 수", JOptionPane.WARNING_MESSAGE);
+    }
+}
+```
 
 <br>
 
