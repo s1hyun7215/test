@@ -142,13 +142,9 @@ public int playTurn() throws InvalidMoveException {
 |------|-----------|
 | 잘못된 열 번호 (음수/범위 초과)로 호출 | `Board.dropPiece()` |
 | `EMPTY` 말을 놓으려 할 때 | `Board.dropPiece()` |
-| 클릭 입력 없이 `decideMove()`가 호출된 경우 | `HumanPlayer.decideMove()` |
-| 둘 수 있는 열이 하나도 없는 상태에서 호출 | `Strategy.decideMove()` |
+| 사용자가 클릭 입력 없이 `decideMove()`가 호출된 경우 | `HumanPlayer.decideMove()` |
+| AI가 둘 수 있는 열이 하나도 없는 상태에서 호출 | `Strategy.decideMove()` |
 
-- 잘못된 열 번호(음수/범위 초과) → UI에서 좌표 계산할 때 `col < 0 || col >= Board.COLS` 체크하니까 안 들어옴
-- `EMPTY` 말을 놓으려 함 → 코드 어디서도 `EMPTY`를 인자로 안 넘김
-- 클릭 없이 `HumanPlayer.decideMove()` 호출 → `GameFrame.handleHumanClick()`이 클릭 후에만 `playOneTurn()` 부르니까 안 일어남
-- 둘 수 있는 열이 없음 → 보드가 가득 차면 Game이 먼저 DRAW 상태로 만들어서 AI 호출 자체가 안 됨
 
 <br>
 
@@ -178,3 +174,4 @@ private void playOneTurn() {
 - **에러 메시지 일원화** — 어떤 종류의 잘못된 수든 `getMessage()`로 사용자에게 그대로 전달 가능
 - **책임 분리** — `Board`와 `Player`는 예외를 **발생시키기만** 하고, UI 계층(`GameFrame`)이 **처리**를 담당
 - **게임 진행 보호** — 예외가 발생해도 게임이 종료되지 않고, 사용자가 다시 입력할 수 있도록 복구
+- **방어적 프로그래밍** — 실제로 발생하지 않을 상황에도 예외를 두어, 호출 규약을 어긴 코드가 조용히 동작하지 않도록 방지
