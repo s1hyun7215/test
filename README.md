@@ -140,21 +140,21 @@ public class InvalidMoveException extends Exception {
 
 <br>
 
-### 예외 상황 및 처리 방식
+### 예외 발생 시점
 
-| 상황 | 처리 방식 |
-|------|-----------|
-| 사용자가 이미 가득 찬 열을 클릭한 경우 | `Board.dropPiece()`에서 예외 발생 → `GameFrame`이 `JOptionPane`으로 알림 후 다시 입력 대기 |
-| 잘못된 열 번호(음수/범위 초과)로 호출된 경우 | `Board.dropPiece()`에서 예외 발생 (방어적 예외 처리) — UI에서 좌표 검증으로 사전 차단되므로 실제로는 발생하지 않음 |
-| 클릭 입력 없이 `HumanPlayer.decideMove()`가 호출된 경우 | 예외 발생 (방어적 예외 처리) — 정상 흐름에서는 발생하지 않으나 호출 순서 오류를 방지 |
-| 둘 수 있는 열이 하나도 없는 상태에서 AI가 호출된 경우 | `Strategy.decideMove()`에서 예외 발생 — 게임 종료 조건(무승부)으로 사전 처리되므로 실제로는 발생하지 않음 |
-| AI 차례에 사용자가 보드를 클릭한 경우 | `BoardPanel.setClickEnabled(false)`로 클릭 이벤트 자체를 차단 (예외 발생 자체를 방지) |
+| 발생 위치 | 발생 조건 |
+|-----------|-----------|
+| `Board.dropPiece()` | 잘못된 열 번호 (음수 또는 범위 초과) |
+| `Board.dropPiece()` | 이미 가득 찬 열에 말을 놓으려 할 때 |
+| `Board.dropPiece()` | `EMPTY` 말을 놓으려 할 때 |
+| `HumanPlayer.decideMove()` | 클릭 입력 없이 호출된 경우 |
+| `Strategy.decideMove()` | 둘 수 있는 열이 하나도 없을 때 |
 
 <br>
 
 ### 예외 처리 흐름
 
-예외는 발생한 `Board`나 `Player`에서 바로 처리하지 않고, `throws` 선언을 통해 **상위 계층인 `GameFrame`까지 전파**되어 `try-catch`로 잡혀 사용자에게 알림 다이얼로그로 표시됩니다.
+예외는 발생한 곳에서 바로 처리하지 않고, **상위 계층(`GameFrame`)까지 전파**되어 사용자에게 알림 다이얼로그로 표시됩니다.
 
 ```java
 // GameFrame.java
@@ -163,6 +163,7 @@ private void playOneTurn() {
         game.playTurn();
         // ... 정상 처리
     } catch (InvalidMoveException e) {
+        // 사용자에게 알림, 다시 입력받기
         JOptionPane.showMessageDialog(this, 
             e.getMessage(), "잘못된 수", JOptionPane.WARNING_MESSAGE);
     }
@@ -174,6 +175,6 @@ private void playOneTurn() {
 ### 이렇게 설계한 이유
 
 - **명확한 의미 전달** — `boolean` 반환값 대신 예외를 사용해 "정상 흐름이 아닌 비정상 상황"임을 명시
+- **에러 메시지 일원화** — 어떤 종류의 잘못된 수든 `getMessage()`로 사용자에게 그대로 전달 가능
 - **책임 분리** — `Board`와 `Player`는 예외를 **발생시키기만** 하고, UI 계층(`GameFrame`)이 **처리**를 담당
-- **방어적 프로그래밍** — 실제로 발생하지 않을 상황에도 예외를 두어, 호출 규약을 어긴 코드가 조용히 동작하지 않도록 방지
 - **게임 진행 보호** — 예외가 발생해도 게임이 종료되지 않고, 사용자가 다시 입력할 수 있도록 복구
