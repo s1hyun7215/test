@@ -159,7 +159,11 @@ public class InvalidMoveException extends Exception {
 | 클릭 입력 없이 `decideMove()`가 호출된 경우 | `HumanPlayer.decideMove()` |
 | 둘 수 있는 열이 하나도 없는 상태에서 호출 | `Strategy.decideMove()` |
 
-> **AI 차례에 사용자가 보드를 클릭하는 경우**는 `BoardPanel.setClickEnabled(false)`로 클릭 이벤트 자체를 차단하여 예외 발생을 사전에 방지합니다.
+- 잘못된 열 번호(음수/범위 초과) → UI에서 좌표 계산할 때 col < 0 || col >= Board.COLS 체크하니까 안 들어옴
+- EMPTY 말을 놓으려 함 → 코드 어디서도 EMPTY를 인자로 안 넘김
+- 클릭 없이 HumanPlayer.decideMove() 호출 → GameFrame.handleHumanClick()이 클릭 후에만 playOneTurn() 부르니까 안 일어남
+- 둘 수 있는 열이 없음 → 보드가 가득 차면 Game이 먼저 DRAW 상태로 만들어서 AI 호출 자체가 안 됨
+
 
 <br>
 
