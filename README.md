@@ -150,6 +150,14 @@ public class InvalidMoveException extends Exception {
 | `HumanPlayer.decideMove()` | 클릭 입력 없이 호출된 경우 |
 | `Strategy.decideMove()` | 둘 수 있는 열이 하나도 없을 때 |
 
+| 상황 | 처리 방식 |
+|------|-----------|
+| 사용자가 이미 가득 찬 열을 클릭한 경우 | `Board.dropPiece()`에서 예외 발생 → `GameFrame`이 `JOptionPane`으로 알림 후 다시 입력 대기 |
+| 잘못된 열 번호(음수/범위 초과)로 호출된 경우 | `Board.dropPiece()`에서 예외 발생 (방어적 예외 처리) — UI에서 좌표 검증으로 사전 차단되므로 실제로는 발생하지 않음 |
+| 클릭 입력 없이 `HumanPlayer.decideMove()`가 호출된 경우 | 예외 발생 (방어적 예외 처리) — 정상 흐름에서는 발생하지 않으나 호출 순서 오류를 방지 |
+| 둘 수 있는 열이 하나도 없는 상태에서 AI가 호출된 경우 | `Strategy.decideMove()`에서 예외 발생 — 게임 종료 조건(무승부)으로 사전 처리되므로 실제로는 발생하지 않음 |
+| AI 차례에 사용자가 보드를 클릭한 경우 | `BoardPanel.setClickEnabled(false)`로 클릭 이벤트 자체를 차단 (예외 발생 자체를 방지) |
+
 <br>
 
 ### 예외 처리 흐름
