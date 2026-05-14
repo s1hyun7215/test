@@ -34,7 +34,7 @@ Java 기반으로 구현한 1인용 **커넥트4** 게임입니다.<br>
 
 ## 클래스 다이어그램
 
-[![Class Diagram](./docs/connect-four.drawio.png)](https://raw.githubusercontent.com/s1hyun7215/test/main/docs/connect-four2.drawio.png)
+[![Class Diagram](./docs/connect-four2.png)](https://raw.githubusercontent.com/s1hyun7215/test/main/docs/connect-four2.png)
 
 > 이미지 클릭 시 원본 크기로 볼 수 있습니다.
 
