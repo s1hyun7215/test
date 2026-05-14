@@ -31,9 +31,14 @@ Java 기반으로 구현한 1인용 **커넥트4** 게임입니다.<br>
 - **예외 처리**: 사용자 정의 예외 (`InvalidMoveException`)
 
 ## 📘 클래스 다이어그램
->이미지 클릭해서 확대
 
-[![Class Diagram](./docs/connect-four.png)](https://raw.githubusercontent.com/s1hyun7215/test/main/docs/connect-four.png)
+## 클래스 다이어그램
+
+<a href="https://raw.githubusercontent.com/s1hyun7215/test/main/docs/connect-four.png">
+  <img src="./docs/connect-four.png" alt="Class Diagram" width="900">
+</a>
+
+> 이미지 클릭 시 원본 크기로 볼 수 있습니다.
 
 
 ## 🏛️ 핵심 설계 (OOP)
