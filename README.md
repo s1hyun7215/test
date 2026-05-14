@@ -47,7 +47,9 @@ Java 기반으로 구현한 1인용 **커넥트4** 게임입니다.<br>
 
 ### 1. 전략 패턴 (Strategy Pattern)
 
-<img src="./docs/ai-diam.svg" width="750">
+<a href="https://raw.githubusercontent.com/s1hyun7215/test/main/docs/ai-diam.svg">
+  <img src="./docs/ai-diam.svg" width="750" alt="AI Strategy Diagram">
+</a>
 
 AI의 난이도별 행동 방식을 `Strategy` 인터페이스로 추상화하고, 각 난이도를 별개의 구현 클래스로 분리했습니다.
 
@@ -79,7 +81,9 @@ public class AIPlayer extends Player {
 
 ### 2. 추상 클래스를 통한 플레이어 추상화
 
-<img src="./docs/player-diam.svg" width="700">
+<a href="https://raw.githubusercontent.com/s1hyun7215/test/main/docs/player-diam.svg">
+  <img src="./docs/player-diam.svg" width="700" alt="Player Diagram">
+</a>
 
 사람과 AI는 입력 방식이 전혀 다르지만(마우스 클릭 vs 알고리즘 계산), 게임 입장에서는 **"다음에 둘 열을 결정한다"** 라는 동일한 행동을 합니다. 이를 `Player` 추상 클래스로 묶었습니다.
 
