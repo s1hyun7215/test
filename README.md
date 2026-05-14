@@ -263,7 +263,6 @@ private List<Integer> getValidColumns(Board board) {
 보드는 **고정 크기(6×7)** 이고, **2차원 좌표로 빠른 접근**이 필요하므로 `Piece[][]` 2차원 배열을 사용했습니다. 
 
 ```java
-// Board.java
 private final Piece[][] grid;   // 6×7 고정 크기
 
 public Piece getCell(int row, int col) {
