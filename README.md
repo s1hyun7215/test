@@ -47,7 +47,7 @@ Java 기반으로 구현한 1인용 **커넥트4** 게임입니다.<br>
 
 ### 1. 전략 패턴 (Strategy Pattern)
 
-<img src="./docs/ai-diam.svg" width="800">
+<img src="./docs/ai-diam.svg" width="750">
 
 AI의 난이도별 행동 방식을 `Strategy` 인터페이스로 추상화하고, 각 난이도를 별개의 구현 클래스로 분리했습니다.
 
