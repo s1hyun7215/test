@@ -234,7 +234,6 @@ private void triggerAITurnIfNeeded() {
 AI가 수를 결정할 때, **현재 보드에서 둘 수 있는 열들의 목록**을 관리하는 데 사용했습니다.
 
 ```java
-// EasyStrategy.java
 private List<Integer> getValidColumns(Board board) {
     List<Integer> valid = new ArrayList<>();
     for (int c = 0; c < Board.COLS; c++) {
