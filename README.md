@@ -275,13 +275,12 @@ public Piece getCell(int row, int col) {
 ### 게임 시작
 >게임 시작 시 **AI 난이도**(쉬움/보통/어려움)와 **선공**(사람/AI)을 선택할 수 있으며, 게임 종료 후 **"새 게임"** 버튼으로 처음부터 다시 시작할 수 있습니다.
 
-![게임 시작 다이얼로그](./docs/startDialogs.webp)
 <table>
   <tr>
     <td align="center"><b>난이도 / 선공 선택 / 게임 진행 / 새 게임</b></td>
   </tr>
   <tr>
-    <td><img src="./docs/startDialogs.webp" alt="게임 시작"/></td>
+    <td><img src="./docs/startDialogs.webp" width="200" alt="게임 시작"/></td>
   </tr>
 </table>
 
