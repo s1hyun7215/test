@@ -132,7 +132,7 @@ public int playTurn() throws InvalidMoveException {
 
 | 상황 | 처리 방식 |
 |------|-----------|
-| 사용자가 이미 가득 찬 열을 클릭한 경우 | `Board.dropPiece()`에서 예외 발생 → `GameFrame`이 `JOptionPane`으로 알림 → 게임 상태가 변경되지 않아 사용자가 다시 입력 가능 |
+| 사용자가 이미 가득 찬 열을 클릭한 경우 | `Board.dropPiece()`에서 예외 발생 → `GameFrame`이 `JOptionPane`으로 알림<br> → 게임 상태가 변경되지 않아 사용자가 다시 입력 가능 |
 
 #### 방어적 예외 처리
 
