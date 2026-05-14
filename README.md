@@ -267,3 +267,47 @@ public Piece getCell(int row, int col) {
 ```
 
 크기가 변하지 않고 인덱스 접근이 주된 작업이므로 컬렉션보다 **원시타입 배열이 더 적합**하다고 판단했습니다.
+
+<br>
+
+## 🖥️ 실행 화면
+
+### 게임 시작
+
+![게임 시작 다이얼로그](./docs/startDialogs.webp)
+
+게임 시작 시 **AI 난이도**(쉬움/보통/어려움)와 **선공**(사람/AI)을 선택할 수 있으며, 게임 종료 후 **"새 게임"** 버튼으로 처음부터 다시 시작할 수 있습니다.
+
+<br>
+
+### 게임 결과
+
+<table>
+  <tr>
+    <td align="center"><b>사람 승리</b></td>
+    <td align="center"><b>AI 승리</b></td>
+  </tr>
+  <tr>
+    <td><img src="./docs/humanWin.webp" alt="사람 승리"/></td>
+    <td><img src="./docs/aiWin.webp" alt="AI 승리"/></td>
+  </tr>
+</table>
+
+가로·세로·대각선으로 먼저 4개를 연결한 쪽이 승리합니다.
+
+<br>
+
+### 무승부 및 예외 처리
+
+<table>
+  <tr>
+    <td align="center"><b>무승부</b></td>
+    <td align="center"><b>잘못된 수 입력</b></td>
+  </tr>
+  <tr>
+    <td><img src="./docs/draw.webp" alt="무승부"/></td>
+    <td><img src="./docs/invalidMoveException.webp" alt="예외 처리"/></td>
+  </tr>
+</table>
+
+6×7 보드가 모두 채워질 때까지 승부가 나지 않으면 무승부로 처리됩니다. 가득 찬 열을 클릭하는 등 잘못된 입력 시 알림 다이얼로그로 안내하며, 사용자는 다시 입력할 수 있습니다.
