@@ -255,7 +255,6 @@ private List<Integer> getValidColumns(Board board) {
 <br>
 
 ### 보드 데이터는 왜 컬렉션을 쓰지 않았나
-
 보드는 **고정 크기(6×7)** 이고, **2차원 좌표로 빠른 접근**이 필요하므로 `Piece[][]` 2차원 배열을 사용했습니다. 
 
 ```java
@@ -281,7 +280,6 @@ public Piece getCell(int row, int col) {
 <br>
 
 ### 게임 결과
-
 가로·세로·대각선으로 먼저 4개를 연결한 쪽이 승리합니다.
 <table>
   <tr>
@@ -298,7 +296,6 @@ public Piece getCell(int row, int col) {
 <br>
 
 ### 무승부 및 예외 처리
-
 6×7 보드가 모두 채워질 때까지 승부가 나지 않으면 무승부로 처리됩니다. 가득 찬 열을 클릭하는 등 잘못된 입력 시 알림 다이얼로그로 안내하며, 사용자는 다시 입력할 수 있습니다.
 <table>
   <tr>
