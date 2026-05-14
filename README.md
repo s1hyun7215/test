@@ -284,7 +284,7 @@ public Piece getCell(int row, int col) {
     <td align="center"><b>난이도 / 선공 선택 / 게임 진행 / 새 게임</b></td>
   </tr>
   <tr>
-    <td><img src="./docs/startDialogs.webp" width="470" alt="게임 시작"/></td>
+    <td><img src="./docs/startDialogs.webp" width="480" alt="게임 시작"/></td>
   </tr>
 </table>
 
