@@ -178,6 +178,53 @@ private void playOneTurn() {
 
 <br>
 
+## 📦 컬렉션 프레임워크 사용
+
+### `ArrayList<Integer>` — 유효한 열 목록 관리
+
+AI가 수를 결정할 때, **현재 보드에서 둘 수 있는 열들의 목록**을 관리하는 데 사용했습니다.
+
+```java
+private List<Integer> getValidColumns(Board board) {
+    List<Integer> valid = new ArrayList<>();
+    for (int c = 0; c < Board.COLS; c++) {
+        if (!board.isColumnFull(c)) {
+            valid.add(c);
+        }
+    }
+    return valid;
+}
+```
+
+**`ArrayList`를 선택한 이유**
+
+| 요구사항 | `ArrayList`가 적합한 이유 |
+|----------|---------------------------|
+| 둘 수 있는 열의 개수가 매 턴마다 달라짐 | 크기가 동적으로 변할 수 있는 자료구조 필요 |
+| 순회하며 각 열을 평가 (이기는 수인지, 막는 수인지) | 순차 접근(`for-each`)이 빠름 |
+| `HardStrategy`에서 최고점 동점 시 랜덤 선택 | 인덱스 접근(`get(i)`)이 O(1)로 빠름 |
+| 중복된 열 번호는 들어가지 않음 (`Set`이 필요 없음) | `List`로 충분 |
+
+`LinkedList`나 `HashSet` 대신 `ArrayList`를 택한 이유는 **빈번한 인덱스 접근과 순회가 핵심 작업**이기 때문입니다. 삽입/삭제가 거의 일어나지 않으므로 `ArrayList`의 O(1) 인덱스 접근이 가장 효율적입니다.
+
+<br>
+
+### 보드 데이터는 왜 컬렉션을 쓰지 않았나
+
+보드는 **고정 크기(6×7)** 이고, **2차원 좌표로 빠른 접근**이 필요하므로 `Piece[][]` 2차원 배열을 사용했습니다. 
+
+```java
+private final Piece[][] grid;   // 6×7 고정 크기
+
+public Piece getCell(int row, int col) {
+    return grid[row][col];   // O(1) 접근
+}
+```
+
+크기가 변하지 않고 인덱스 접근이 주된 작업이므로 컬렉션보다 **원시타입 배열이 더 적합**하다고 판단했습니다.
+
+<br>
+
 ## 🧩 트러블슈팅
 
 ### AI턴 진행 시 화면이 멈추는 문제
@@ -224,53 +271,6 @@ private void triggerAITurnIfNeeded() {
 - 사용자 클릭 즉시 빨강 말이 화면에 나타남
 - 600ms 후 AI가 노랑 말을 둠
 - 사용자가 의도한 "AI 사고 시간" 효과가 정상적으로 동작
-
-<br>
-
-## 📦 컬렉션 프레임워크 사용
-
-### `ArrayList<Integer>` — 유효한 열 목록 관리
-
-AI가 수를 결정할 때, **현재 보드에서 둘 수 있는 열들의 목록**을 관리하는 데 사용했습니다.
-
-```java
-private List<Integer> getValidColumns(Board board) {
-    List<Integer> valid = new ArrayList<>();
-    for (int c = 0; c < Board.COLS; c++) {
-        if (!board.isColumnFull(c)) {
-            valid.add(c);
-        }
-    }
-    return valid;
-}
-```
-
-**`ArrayList`를 선택한 이유**
-
-| 요구사항 | `ArrayList`가 적합한 이유 |
-|----------|---------------------------|
-| 둘 수 있는 열의 개수가 매 턴마다 달라짐 | 크기가 동적으로 변할 수 있는 자료구조 필요 |
-| 순회하며 각 열을 평가 (이기는 수인지, 막는 수인지) | 순차 접근(`for-each`)이 빠름 |
-| `HardStrategy`에서 최고점 동점 시 랜덤 선택 | 인덱스 접근(`get(i)`)이 O(1)로 빠름 |
-| 중복된 열 번호는 들어가지 않음 (`Set`이 필요 없음) | `List`로 충분 |
-
-`LinkedList`나 `HashSet` 대신 `ArrayList`를 택한 이유는 **빈번한 인덱스 접근과 순회가 핵심 작업**이기 때문입니다. 삽입/삭제가 거의 일어나지 않으므로 `ArrayList`의 O(1) 인덱스 접근이 가장 효율적입니다.
-
-<br>
-
-### 보드 데이터는 왜 컬렉션을 쓰지 않았나
-
-보드는 **고정 크기(6×7)** 이고, **2차원 좌표로 빠른 접근**이 필요하므로 `Piece[][]` 2차원 배열을 사용했습니다. 
-
-```java
-private final Piece[][] grid;   // 6×7 고정 크기
-
-public Piece getCell(int row, int col) {
-    return grid[row][col];   // O(1) 접근
-}
-```
-
-크기가 변하지 않고 인덱스 접근이 주된 작업이므로 컬렉션보다 **원시타입 배열이 더 적합**하다고 판단했습니다.
 
 <br>
 
